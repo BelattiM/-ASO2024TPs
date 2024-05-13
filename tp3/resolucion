@@ -1,0 +1,26 @@
+               tareas_SIN_hilos.py
+lo que se puede notar es que existe una diferencia en el timpo de ejecucion de cada tarea cada vez que se ejecuta el codigo.
+Si bien los tiempos son parecidos, no podemos decir que estos son predecibles
+Un ejemplo de proceso de maxima velocidad que podemos decir que un cambio en el formato de una imagen.dejpg a png
+en el caso de velocidad de respuesta no dependiente de la velocidad de procesamiento podemos tener de ejeplo la descarga de archivos desde internet.
+
+
+              tareas_CON_hilos.pys 
+podemos notar una mejora de alrededor de 2 segundos menos con respecto al programa sin hilos, debido a que estos se estan ejecutando a la vez y no uno 
+despues del otro.
+Las funciones no se completan en un orden establecido. En este caso la que termina primero, finaliza primera.
+Un ejemplo donde el multi-hilado mejora considerablemente el tiempo de respuesta es el streaming, donde tendriamos las descargas y podrian suceder eventos en lo que vendria 
+a conocerse como el chat.
+
+
+          sumador-restador_CON_race.py
+El tiempo de ejecucion es practicamente instantaneo 
+el valor final del acumulador varia de distinta manera cada vez que ejecutamos el codigo, se debe a que ambos hilos se ejecutan de manera simultanea y pueden superponerse, 
+dependiendo de estos, el resultado final va variando.
+Esto se puede solucionar con un mecanismo de bloque o semaforo, como lo visto en clase
+
+
+          sumador-restador_SIN_race.py
+el valor final es 0, ya que se estan realizando la misma cantidad de incrementos y decrementos, con el timpo de ejecucion practicamente instantaneo, ya que se estan ejecutando 
+en simultaneo.
+
